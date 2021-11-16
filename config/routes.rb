@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # get 'tweets/create'
   # get 'users/index'
   # get 'users/show'
-  root 'tweets/index'
+  root 'tweets#index'
   devise_for :users
   resources :tweets
   resources :users
