@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'favorites/create'
+  get 'favorites/destroy'
   # get 'tweets/new'
   # get 'tweets/index'
   # get 'tweets/show'
