@@ -7,7 +7,11 @@ class FavoritesController < ApplicationController
     favorite.save
     redirect_to tweets_path
   end
-
+  
   def destroy
+    favorite = Favorite.find_by(tweet_id: params[:tweet_id], user_id: current_user.id)
+    favorite.destroy
+    binding.pry
+    redirect_to tweets_path
   end
 end
